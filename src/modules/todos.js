@@ -27,3 +27,23 @@ export const remove = id => ({
   type: REMOVE,
   id
 });
+
+// 초기상태 및 리듀서함수 만들기.!!
+// 아래 코드를 어떻게 읽어야 퍼팩트 한걸까... 댓글 남겨주세요.!!
+const initialState = {
+  input: '',
+  todos: [
+    {
+      id: 1,
+      text: '리덕스 기초 배우기',
+      done: true
+    },
+    {
+      id: 2,
+      text: '리액트와 리덕스 사용하기',
+      done: false
+    }
+  ]  
+};
+
+
