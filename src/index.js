@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -10,9 +11,15 @@ import rootReducer from './modules';
 // 스토어 생성하기.
 const store = createStore(rootReducer);
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <Provider store={store}>
+    <App /> 
+  </Provider>,
+  document.getElementById('root'),
+);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+
 serviceWorker.unregister();
+
+// 크롬 확장프로그램 ReduxDevtools 설치후
+// yarn add redux-devtools-extension 해주기.
