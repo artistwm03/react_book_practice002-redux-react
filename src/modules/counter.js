@@ -11,3 +11,29 @@ const DECREASE = 'counter/DECREASE';
 //    앞에 export 들어감. !! 왜 들어갈지 생각 조금만 해봐.
 export const increase = () => ({ type: INCREASE });
 export const decrease = () => ({ type: DECREASE });
+
+
+// 3) 초기화
+//    number 값을 0 으로 초기화,
+const initialState = {
+  number: 0
+};
+
+// 4) 리듀서 함수.!! ( counter 라는 리듀서 함수.)
+//    현재 상태를 참고해서 , 새로운 객체를 생성해서 반환해주는 코드작성해줬음.
+function counter(state = initialState, action) {
+  switch (action.type) {
+    case INCREASE:
+      return {
+        number: state.number + 1
+      };
+    case DECREASE:
+      return {
+        number: state.number - 1
+      };
+    default:
+      return state;
+  }
+}
+// 함수 내보내주기.
+export default counter;
