@@ -9,6 +9,7 @@ const DECREASE = 'counter/DECREASE';
 
 // 2) 액션 생성 함수 만들기
 //    앞에 export 들어감. !! 왜 들어갈지 생각 조금만 해봐.
+//     increase, decrease 가 결국 액션 생성 함수 라고 생각하면 됨.
 export const increase = () => ({ type: INCREASE });
 export const decrease = () => ({ type: DECREASE });
 
