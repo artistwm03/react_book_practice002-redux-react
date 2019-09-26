@@ -1,3 +1,6 @@
+import { createAction } from 'redux-actions';
+//yarn add redux-actions 해주고나서 쓰기.
+
 // 리 덕 스 관 련 코 드 작 성
 
 // Ducks 패턴 사용할 예정.
@@ -10,9 +13,10 @@ const DECREASE = 'counter/DECREASE';
 // 2) 액션 생성 함수 만들기
 //    앞에 export 들어감. !! 왜 들어갈지 생각 조금만 해봐.
 //     increase, decrease 가 결국 액션 생성 함수 라고 생각하면 됨.
-export const increase = () => ({ type: INCREASE });
-export const decrease = () => ({ type: DECREASE });
-
+// export const increase = () => ({ type: INCREASE });
+// export const decrease = () => ({ type: DECREASE });
+export const increase = createAction(INCREASE);
+export const decrease = createAction(DECREASE);
 
 // 3) 초기화
 //    number 값을 0 으로 초기화,
