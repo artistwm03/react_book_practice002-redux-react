@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Counter from '../components/Counter';
 
 const CounterContainer = ({ number, increase, decrease }) => {
-  return <Counter number={number} onIncrease={increase} onDecrase={decrease} />;
+  return <Counter number={number} onIncrease={increase} onDecrease={decrease} />;
 };
 
 const mapStateToProps = state => ({
